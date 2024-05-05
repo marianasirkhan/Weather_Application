@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SettingsScreen">
+   <children>
+      <Button fx:id="button" layoutX="-90.0" layoutY="-90.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+      <Label layoutX="114.0" layoutY="31.0" prefHeight="39.0" prefWidth="166.0" text="Ustawienia">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <JFXToggleButton fx:id="walkingToggle" layoutX="105.0" layoutY="118.0" onAction="#toggleChanged" selected="true" size="15.0" text="Porady dla pieszych" toggleColor="#75b8bf" toggleLineColor="#1f9bd3">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXToggleButton>
+      <JFXToggleButton fx:id="ridingToggle" layoutX="105.0" layoutY="178.0" onAction="#toggleChanged" selected="true" size="15.0" text="Porady dla kierowców" toggleColor="#75b8bf" toggleLineColor="#1f9bd3">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXToggleButton>
+      <JFXToggleButton fx:id="pollenToggle" layoutX="105.0" layoutY="238.0" onAction="#toggleChanged" size="15.0" text="Porady dla alergików" toggleColor="#75b8bf" toggleLineColor="#1f9bd3">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXToggleButton>
+      <Label layoutX="127.0" layoutY="89.0" prefHeight="39.0" prefWidth="166.0" text="Porady">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="127.0" layoutY="341.0" prefHeight="39.0" prefWidth="166.0" text="Lokalizacja">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="127.0" layoutY="392.0" prefHeight="39.0" prefWidth="192.0" text="Aktualnie wybrane miasto:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="162.0" layoutY="442.0" onAction="#changeLocalization" prefHeight="39.0" prefWidth="142.0" style="-fx-background-color: DCDFE5; -fx-background-radius: 30;" text="ZMIEŃ LOKALIZACJĘ" />
+      <Label fx:id="selectedCity" layoutX="319.0" layoutY="392.0" prefHeight="39.0" prefWidth="241.0" text="Kielce">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="menuClosed" prefHeight="720.0" prefWidth="75.0" style="-fx-background-color: #FAFAFA;">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="300.0" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #1f9bd3; -fx-background-radius: 180;" />
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#openMenu" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../graphics/menu-burger.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="15.0" layoutY="100.0" mnemonicParsing="false" onAction="#openHomeScreen" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../graphics/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="15.0" layoutY="170.0" mnemonicParsing="false" onAction="#openCalendar" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../graphics/calendar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="15.0" layoutY="240.0" mnemonicParsing="false" onAction="#openChooseCityScreen" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../graphics/marker.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="15.0" layoutY="310.0" mnemonicParsing="false" onAction="#openSettings" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../graphics/setting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="15.0" layoutY="670.0" mnemonicParsing="false" onAction="#exitApplication" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../graphics/sign-out.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuOpened" prefHeight="720.0" prefWidth="350.0" style="-fx-background-color: #FAFAFA;" visible="false">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="300.0" prefHeight="60.0" prefWidth="342.0" style="-fx-background-color: #1f9bd3; -fx-background-radius: 90;" />
+            <Label layoutX="105.0" layoutY="20.0" text="Menu">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="105.0" text="Strona domowa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="175.0" text="Prognoza długoterminowa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="245.0" text="Wybór lokalizacji">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="315.0" text="Ustawienia">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="675.0" text="Wyjście">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="23.0" layoutY="19.0">
+               <image>
+                  <Image url="@../graphics/menu-burger.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="23.0" layoutY="104.0">
+               <image>
+                  <Image url="@../graphics/home.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="23.0" layoutY="174.0">
+               <image>
+                  <Image url="@../graphics/calendar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="23.0" layoutY="244.0">
+               <image>
+                  <Image url="@../graphics/marker.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="23.0" layoutY="314.0">
+               <image>
+                  <Image url="@../graphics/setting.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="23.0" layoutY="674.0">
+               <image>
+                  <Image url="@../graphics/sign-out.png" />
+               </image>
+            </ImageView>
+            <Button layoutY="10.0" mnemonicParsing="false" onAction="#closeMenu" prefHeight="50.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+            <Button layoutY="90.0" mnemonicParsing="false" onAction="#openHomeScreen" prefHeight="60.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+            <Button layoutY="160.0" mnemonicParsing="false" onAction="#openCalendar" prefHeight="60.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+            <Button layoutY="230.0" mnemonicParsing="false" onAction="#openChooseCityScreen" prefHeight="60.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+            <Button layoutY="300.0" mnemonicParsing="false" onAction="#openSettings" prefHeight="60.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+            <Button layoutY="665.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="50.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

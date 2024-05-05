@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LongTermWeatherScreen">
+   <children>
+      <Button fx:id="button" layoutX="-100.0" layoutY="-100.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+      <Label alignment="CENTER" layoutX="75.0" layoutY="30.0" prefHeight="35.0" prefWidth="1200.0" text="Prognoza długoterminowa">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="cityLabel" alignment="CENTER" layoutX="75.0" layoutY="70.0" prefHeight="35.0" prefWidth="1200.0" text="Kielce">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="75.0" layoutY="125.0" prefHeight="550.0" prefWidth="1200.0">
+         <children>
+            <AnchorPane fx:id="dayOne" layoutX="15.0" layoutY="15.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayOneDateLabel" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayOneWeatherLabel" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayOnePicture" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayTwo" layoutX="185.0" layoutY="15.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayTwoDateLabel" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayTwoWeatherLabel" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayTwoPicture" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayThree" layoutX="355.0" layoutY="15.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayThreeDateLabel" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayThreeWeatherLabel" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayThreePicture" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayFour" layoutX="525.0" layoutY="15.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayFourDateLabel" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayFourWeatherLabel" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayFourPicture" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayFive" layoutX="695.0" layoutY="15.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayFiveDateLabel" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayFiveWeatherLabel" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayFivePicture" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="daySix" layoutX="865.0" layoutY="15.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="daySixDateLabel" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="daySixWeatherLabel" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="daySixPicture" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="daySeven" layoutX="1035.0" layoutY="15.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="daySevenDateLabel" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="daySevenWeatherLabel" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="daySevenPicture" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayOne1" layoutX="15.0" layoutY="190.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayOneDateLabel1" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayOneWeatherLabel1" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayOnePicture1" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayTwo1" layoutX="185.0" layoutY="190.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayTwoDateLabel1" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayTwoWeatherLabel1" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayTwoPicture1" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayThree1" layoutX="355.0" layoutY="190.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayThreeDateLabel1" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayThreeWeatherLabel1" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayThreePicture1" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayFour1" layoutX="525.0" layoutY="190.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayFourDateLabel1" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayFourWeatherLabel1" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayFourPicture1" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayFive1" layoutX="695.0" layoutY="190.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayFiveDateLabel1" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayFiveWeatherLabel1" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayFivePicture1" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="daySix1" layoutX="865.0" layoutY="190.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="daySixDateLabel1" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="daySixWeatherLabel1" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="daySixPicture1" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="daySeven1" layoutX="1035.0" layoutY="190.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="daySevenDateLabel1" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="daySevenWeatherLabel1" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="daySevenPicture1" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayOne11" layoutX="15.0" layoutY="365.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayOneDateLabel11" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayOneWeatherLabel11" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayOnePicture11" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayTwo11" layoutX="185.0" layoutY="365.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayTwoDateLabel11" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayTwoWeatherLabel11" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayTwoPicture11" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayThree11" layoutX="355.0" layoutY="365.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayThreeDateLabel11" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayThreeWeatherLabel11" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayThreePicture11" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayFour11" layoutX="525.0" layoutY="365.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayFourDateLabel11" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayFourWeatherLabel11" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayFourPicture11" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dayFive11" layoutX="695.0" layoutY="365.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="dayFiveDateLabel11" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dayFiveWeatherLabel11" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dayFivePicture11" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="daySix11" layoutX="865.0" layoutY="365.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="daySixDateLabel11" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="daySixWeatherLabel11" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="daySixPicture11" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="daySeven11" layoutX="1035.0" layoutY="365.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #e2e2e2; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="daySevenDateLabel11" alignment="CENTER" layoutY="5.0" prefHeight="20.0" prefWidth="150.0" text="wt. 26.04">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="daySevenWeatherLabel11" alignment="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="11°&#10;Opady deszczu" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="daySevenPicture11" fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="36.0">
+                     <image>
+                        <Image url="@../graphics/rainy.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuClosed" prefHeight="720.0" prefWidth="75.0" style="-fx-background-color: #FAFAFA;">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="160.0" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #1f9bd3; -fx-background-radius: 180;" />
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#openMenu" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../graphics/menu-burger.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="15.0" layoutY="100.0" mnemonicParsing="false" onAction="#openHomeScreen" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../graphics/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="15.0" layoutY="170.0" mnemonicParsing="false" onAction="#openCalendar" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../graphics/calendar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="15.0" layoutY="240.0" mnemonicParsing="false" onAction="#openChooseCityScreen" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../graphics/marker.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="15.0" layoutY="310.0" mnemonicParsing="false" onAction="#openSettings" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../graphics/setting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="15.0" layoutY="670.0" mnemonicParsing="false" onAction="#exitApplication" style="-fx-background-radius: 90; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../graphics/sign-out.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuOpened" prefHeight="720.0" prefWidth="350.0" style="-fx-background-color: #FAFAFA;" visible="false">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="160.0" prefHeight="60.0" prefWidth="342.0" style="-fx-background-color: #1f9bd3; -fx-background-radius: 90;" />
+            <Label layoutX="105.0" layoutY="20.0" text="Menu">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="105.0" text="Strona domowa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="175.0" text="Prognoza długoterminowa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="245.0" text="Wybór lokalizacji">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="315.0" text="Ustawienia">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="675.0" text="Wyjście">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="23.0" layoutY="19.0">
+               <image>
+                  <Image url="@../graphics/menu-burger.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="23.0" layoutY="104.0">
+               <image>
+                  <Image url="@../graphics/home.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="23.0" layoutY="174.0">
+               <image>
+                  <Image url="@../graphics/calendar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="23.0" layoutY="244.0">
+               <image>
+                  <Image url="@../graphics/marker.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="23.0" layoutY="314.0">
+               <image>
+                  <Image url="@../graphics/setting.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="23.0" layoutY="674.0">
+               <image>
+                  <Image url="@../graphics/sign-out.png" />
+               </image>
+            </ImageView>
+            <Button layoutY="10.0" mnemonicParsing="false" onAction="#closeMenu" prefHeight="50.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+            <Button layoutY="90.0" mnemonicParsing="false" onAction="#openHomeScreen" prefHeight="60.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+            <Button layoutY="160.0" mnemonicParsing="false" onAction="#openCalendar" prefHeight="60.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+            <Button layoutY="230.0" mnemonicParsing="false" onAction="#openChooseCityScreen" prefHeight="60.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+            <Button layoutY="300.0" mnemonicParsing="false" onAction="#openSettings" prefHeight="60.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+            <Button layoutY="665.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="50.0" prefWidth="350.0" style="-fx-background-radius: 90; -fx-background-color: transparent;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
